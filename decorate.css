@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&family=Poppins:wght@600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+:root{
+    --header-height: 3rems;
+
+
+    --title-color: #3B303E;
+    --text-color: #3B303E;
+    --container-color: #fff;
+    --container-color-alt: #f0efef;
+    --body-color: #F3C53C;
+
+
+    --body-font:'Montserrat', sans-serif;
+    --title-font:'Poppins', sans-serif;
+    --h1-font-size: 1.8rem;
+    --h2-font-size: 1.25rem;
+    --h2-font-size: 1rem;
+    --normal-font-size: 1em;
+    --small-font-size: .879em;
+
+    --font-medium: 500;
+    --font-medium-small: 200;
+    --font-semi-bold: 600;
+
+    --mb-1: .5rem;
+    --mb-2: 1rem;
+    --mb-3: 1.5rem;
+
+    --z-tooltip: 10;
+    --z-fixed: 100;
+}
+
+*, ::before, ::after{
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0 0 var(--header-height) 0;
+    padding: 10px;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--container-color-alt);
+    color: var(--text-color);
+}
+
+h1, h2, ul, p{
+    margin: 0;
+}
+h1, h2, h3{
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+ul{
+    padding: 0;
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.section{
+    padding:1.5rem 0;
+}
+.section-title{
+    font-size: var(--h2-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+    text-transform: uppercase;
+    letter-spacing: .35rem;
+    margin-bottom: var(--mb-3);
+    text-align: center;
+}
+
+.home{
+    position: realtive;
+}
+.home-container{
+    gap: 3rem;
+}
+.home-data{
+    gap: .5rem;
+    text-align: center;
+}
+
+.home-title{
+    font-size: var(--h1-font-size);
+    margin-bottom: var(--mb-1);
+    font-family: var(--title-font);
+    font-weight: var(--font-semi-bold);
+    line-height: 1;
+}
+
+.home-profession{
+    font-size: var(--normal-font-size);
+    margin-bottom: var(--mb-1);
+    font-weight: var(--font-medium);
+}
+.home-address{
+    gap: 2rem;
+}
+.home-info{
+    display: flex;
+    align-items: center;
+    font-size: var(--small-font-size);
+    
+}
+.icon{
+    width: 1.5em;
+    margin-right: .25rem;
+}
+.social-container{
+    grid-template-columns: max-content;
+    gap: 1rem;
+
+}
+.social-link{
+    display: flex;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+}
+.social-link:hover{
+    color:var(--body-color)
+}
+.profile-descrip{
+    text-align: center;
+}
+.education{
+    margin-bottom: 50px;
+}
+ul.education-list{
+    list-style: none;
+    font-size: var(--small-font-size);
+    color: var(--text-color);
+}
+.education-time{
+    padding-right: 1rem;
+}
+.education-title,
+.experience-title{
+    font-size: var(--h2-font-size);
+}
+.skills-content{
+    gap:0;
+}
+.skills-name{
+    display: flex;
+    align-items:center;
+    margin-bottom: var(--mb-3);
+}
+.skills-circle{
+    display: inline-block;
+    width: 5px;
+    height: 5px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+    margin-right: .75rem;
+}
+
+.education-content,
+.experience-content{
+    display: flex;
+}
+.education-time,
+.experience-time{
+    padding-right: 1rem;
+}
+
+.experience-desc{
+    gap: .5rem;
+}
+
+.experience-round{
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 16px;
+    background-color: var(--text-color);
+    border-radius: 50%;
+}
+
+.experience-line{
+    display: block;
+    width: 2px;
+    height: 175px;
+    background-color: var(--text-color);
+    transform: translate(7px, 0);
+}
+.education-data,
+.experience-data{
+    gap:.5rem;
+}
+.education-studies{
+    font-size: var(--small-font-size);
+}
+
+.experience-company{
+    font-size: var(--small-font-size);
+}
+
+@media screen and (min-width: 968px){
+    body{
+        margin: 3rem;
+    }
+    .bd-container{
+        margin-right: auto;
+        margin-left: auto;
+    }
+    .home-title{
+        text-align: left;
+    }
+    .home-profession{
+        text-align: left;
+    }
+    .resume{
+        display: grid;
+        grid-template-columns: .5fr 1fr;
+        background-color: var(--container-color);
+        box-shadow: 0 0 8px rgba(13, 12, 12, .15);
+    }
+    .resume-left,
+    .resume-right{
+        padding: 0 1.9rem;
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+    .resume-right{
+        background-color: var(--body-color);
+    }
+    .section-title,
+    .profile-descrip{
+        text-align: initial;
+    }
+    .home-container {
+        gap: 1.5rem;
+    }
+}
